@@ -1,0 +1,19 @@
+//Courtesy: http://sassmeister.com/gist/d1b14280c6160f91f295
+@function lighten-new($color, $amount: 0%) {
+    @if $amount == 0 {$amount: 0%;}
+    @return lighten($color, ($amount/100%) * (100% - lightness($color)));
+}
+
+@function darken-new($color, $amount: 0%) {
+    @if $amount == 0 {$amount: 0%;}
+    @return darken($color, ($amount/100%) * (lightness($color)));
+}
+
+$green-base: rgb(98,115,76);
+$green-base-dark: darken-new($green-base, 25%);
+$green-base-light: lighten-new($green-base, 10%);
+$background: rgb(240,240,240);
+$background-dark: darken-new($background, 25%);
+$text-base: darken-new($background, 50%);
+$text-base-dark: darken-new($text-base, 20%);
+$red-base: rgb(115,56,56);

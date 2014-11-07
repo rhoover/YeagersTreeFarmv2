@@ -1,0 +1,93 @@
+.header {
+    @include span(12 of 12 no-gutters);
+    position: fixed;
+    z-index: 100;
+    background: $green-base;
+    @include background-image(linear-gradient($green-base-light, $green-base-dark));
+    @include box-shadow($green-base-dark 0px 2px 5px);
+    border-bottom: 1px solid darken-new($green-base-dark, 20%);
+    @include susy-breakpoint($bp-medium, $columns-medium) {
+        @include span(18 of 18 no-gutters);
+    }
+    @include susy-breakpoint($bp-large, $columns-large) {
+        @include span(24 of 24 no-gutters);
+    }
+}
+
+.brand-name {
+    @include span(9 of 12 no-gutters);
+    margin: 0;
+    padding: rhythm(.5, 16px) 0;
+    @include type-scale(medium);
+    @include type-weight(regular);
+    font-family: 'Julius Sans One', sans-serif;
+    text-align: center;
+    color: $background;
+    @include susy-breakpoint($bp-medium, $columns-medium) {
+        @include span(15 of 18  no-gutters);
+        padding-left: span(2 of 18);
+    }
+    @include susy-breakpoint($bp-large, $columns-large) {
+        @include span(10 of 24  no-gutters);
+        text-align: left;
+        @include type-scale(large);
+        padding: rhythm(.25, 16px) 0 rhythm(.25, 16px) span(2 of 24);
+    }
+}
+
+.desk-menu {
+    display: none;
+    @include susy-breakpoint($bp-large, $columns-large) {
+        display: inline-block;
+        @include span(last 10 of 24);
+        padding: rhythm(.75, 16px) span(1 of 24);
+        text-align: right;
+    }
+    &-item {
+            padding: 0 gutter(6);
+            border-right: .1em solid darken-new($background, 25%);
+            text-align: center;
+            font-family: sans-serif;
+            text-decoration: none;
+            color: $background;
+            &:hover {
+                text-decoration: underline;
+            }
+    }
+}
+
+.mobile-menu {
+    position: fixed;
+    @include span(6 of 12 no-gutters);
+    top: rhythm(2.7, 16px);
+    height: 100vh;
+    @include background-image(linear-gradient(rgba($green-base-light, .85), rgba($green-base-dark, .85) ));
+    border-right: .05em solid darken-new($green-base-dark, 25%);
+    @include susy-breakpoint($bp-medium, $columns-medium) {
+        @include span(18 of 18 no-gutters);
+        // padding: 0  span(1 of 18);
+        height: auto;
+        @include background-image(linear-gradient(rgba($green-base-light, .85), rgba($green-base-light, .85) ));
+        border-bottom: .1em solid $green-base-dark;
+    }
+    @include susy-breakpoint($bp-large, $columns-large) {
+        display: none;
+    }
+    &-item {
+        @include span(6 of 6 no-gutters);
+        padding: rhythm(.25, 16px) span(1 of 12);
+        border-bottom: .1em solid $background;
+        z-index: 50;
+        text-align: left;
+        text-decoration: none;
+        @include type-scale(base);
+        font-family: 'Julius Sans One', sans-serif;
+        color: $background;
+        @include susy-breakpoint($bp-medium, $columns-medium) {
+            @include span(4.5 of 18 no-gutters);
+            padding: rhythm(.5, 16px) 0;
+            border-bottom: none;
+            text-align: center;
+        }
+    }
+}

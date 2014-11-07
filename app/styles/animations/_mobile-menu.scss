@@ -1,0 +1,12 @@
+.mobile-menu.ng-hide-add,
+.mobile-menu.ng-hide-remove {
+    @include transition-timing-function(cubic-bezier(0.250, 0.460, 0.450, 0.940) );
+    @include transition-duration(.75s);
+    left: span(0 of 12);
+}
+.mobile-menu.ng-hide {
+    left: span(-6 of 12);
+    @include susy-breakpoint($bp-medium, $columns-medium) {
+        left: span(-18 of 18);
+    }
+}

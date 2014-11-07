@@ -1,0 +1,17 @@
+.menu-button {
+    @include span( last 2 of 12 );
+    @include type-scale(large);
+    margin: rhythm(.25, 16px);
+    text-align: center;
+    @include border-radius(.25em);
+    @include background-image(linear-gradient($green-base-light, $green-base-dark));
+    @include box-shadow(rgba($background, .3) 1px 1px 0 0 inset);
+    border: 1px solid rgba(darken($red-base, 8%), .5);
+    color: darken-new($background, 25%);
+    @include susy-breakpoint($bp-medium, $columns-medium) {
+        @include span(last 2 of 18);
+    }
+    @include susy-breakpoint($bp-large, $columns-large) {
+        display: none;
+    }
+}

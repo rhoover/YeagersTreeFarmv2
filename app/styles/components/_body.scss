@@ -2,7 +2,6 @@ body {
     @include container;
     margin: 0;
     height: 100%;
-    // font-family: $MerriweatherSans;
-    // @extent %weight-ultralight;
-    // background-color: $white;
+    z-index: 0;
+    background: $background;
 }
