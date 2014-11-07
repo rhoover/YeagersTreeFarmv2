@@ -1,0 +1,20 @@
+%responsive-trigger {
+    &::after {
+        content: "phone";
+        display: block;
+        position: absolute;
+        top: 0px;
+        left: -1000px;
+        @include susy-breakpoint($bp-medium, $columns-medium) {
+            content: "tablet";
+        }
+        @include susy-breakpoint($bp-large, $columns-large) {
+            content: "computer";
+        }
+    }
+}
+
+%hero-image {
+    background-size: cover !important;
+    margin-top: rhythm(2.6, 16px);
+}

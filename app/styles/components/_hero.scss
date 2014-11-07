@@ -1,0 +1,22 @@
+.hero {
+    @extend %responsive-trigger;
+}
+
+.hero.small {
+    @extend %hero-image;
+    background: url(/images/hero-small.jpg) no-repeat;
+    @include span(12 of 12 no-gutters);
+    height: 139px;
+}
+.hero.medium {
+    @extend %hero-image;
+    background: url(/images/hero-medium.jpg) no-repeat;
+    @include span(18 of 18 no-gutters);
+    height: 308px;
+}
+.hero.large {
+    @extend %hero-image;
+    background: url(/images/hero-large.jpg) no-repeat;
+    @include span(24 of 24 no-gutters);
+    height: 492px;
+}
