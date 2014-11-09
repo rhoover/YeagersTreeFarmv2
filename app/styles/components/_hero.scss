@@ -1,22 +1,87 @@
 .hero {
     @extend %responsive-trigger;
+    @extend %hero-image;
+    &.-phone {
+        background: url(/images/hero-index-phone.jpg) no-repeat;
+    }
+    &.-tablet {
+        background: url(/images/hero-index-tablet.jpg) no-repeat;
+    }
+    &.-computer {
+        background: url(/images/hero-index-computer.jpg) no-repeat;
+    }
 }
 
-.hero.small {
-    @extend %hero-image;
-    background: url(/images/hero-small.jpg) no-repeat;
-    @include span(12 of 12 no-gutters);
-    height: 139px;
-}
-.hero.medium {
-    @extend %hero-image;
-    background: url(/images/hero-medium.jpg) no-repeat;
-    @include span(18 of 18 no-gutters);
-    height: 308px;
-}
-.hero.large {
-    @extend %hero-image;
-    background: url(/images/hero-large.jpg) no-repeat;
-    @include span(24 of 24 no-gutters);
-    height: 492px;
+// Inspired by: http://www.matrixgroup.net/snackoclock/2014/10/sass-maps-source-maps/
+$pageHeroMap: (
+    index: (
+        small: phone,
+        medium: tablet,
+        large: computer
+    ),
+    about: (
+        small: phone,
+        medium: tablet,
+        large: computer
+    ),
+    contact-form-thank-you: (
+        small: phone,
+        medium: tablet,
+        large: computer
+    ),
+    contact: (
+        small: phone,
+        medium: tablet,
+        large: computer
+    ),
+    locate: (
+        small: phone,
+        medium: tablet,
+        large: computer
+    ),
+    services: (
+        small: phone,
+        medium: tablet,
+        large: computer
+    ),
+    talltrees: (
+        small: phone,
+        medium: tablet,
+        large: computer
+    ),
+    traditions: (
+        small: phone,
+        medium: tablet,
+        large: computer
+    ),
+    treecare: (
+        small: phone,
+        medium: tablet,
+        large: computer
+    ),
+    trees: (
+        small: phone,
+        medium: tablet,
+        large: computer
+    )
+);
+
+@each $page, $pageProps in $pageHeroMap {
+    .hero {
+        &.#{$page}-#{map-get($pageProps, small)} {
+            background: url(/images/hero-#{$page}-#{map-get($pageProps, small)}.jpg ) no-repeat;
+            background-size: cover;
+            height: 139px;
+        }
+        &.#{$page}-#{map-get($pageProps, medium)} {
+            background: url(/images/hero-#{$page}-#{map-get($pageProps, medium)}.jpg ) no-repeat;
+            background-size: cover;
+            height: 308px;
+        }
+        &.#{$page}-#{map-get($pageProps, large)} {
+            background: url(/images/hero-#{$page}-#{map-get($pageProps, large)}.jpg ) no-repeat;
+            background-size: cover;
+            height: 492px;
+        }
+    }
 }

@@ -15,6 +15,12 @@
 }
 
 %hero-image {
-    background-size: cover !important;
     margin-top: rhythm(2.6, 16px);
+    @include span(12 of 12 no-gutters);
+    @include susy-breakpoint($bp-medium, $columns-medium) {
+        @include span(18 of 18 no-gutters);
+    }
+    @include susy-breakpoint($bp-large, $columns-large) {
+        @include span(24 of 24 no-gutters);
+    }
 }
