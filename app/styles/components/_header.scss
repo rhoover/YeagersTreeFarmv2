@@ -35,6 +35,19 @@
     }
 }
 
+.logo {
+    display: none;
+    @include susy-breakpoint($bp-medium, $columns-medium) {
+        display: inline-block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        overflow: visible;
+        width: 200px;
+        height: 268px;
+    }
+}
+
 .desk-menu {
     display: none;
     @include susy-breakpoint($bp-large, $columns-large) {
