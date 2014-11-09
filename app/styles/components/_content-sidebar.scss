@@ -1,0 +1,66 @@
+.sidebar {
+    @include lob-owl();
+    @include span(12 of 12 no-gutters);
+    min-height: 100vh;
+    @include susy-breakpoint($bp-medium, $columns-medium) {
+        @include span(last 6 of 18);
+    }
+    @include susy-breakpoint($bp-large, $columns-large) {
+        @include span(last 8 of 24);
+    }
+    &-item {
+        float: left;
+        &-image {
+            display: inline-block;
+            width: 48px;
+            height: 48px;
+            opacity: .7;
+        }
+        &-header {
+            margin: rhythm(1, 15px) 0 0;
+            border-bottom: .05em solid $text-base;
+            font-family: 'Julius Sans One', sans-serif;
+            &:first-of-type {
+                margin-top: 0;
+            }
+        }
+        &-text {
+            margin: rhythm(1, 15px) 0 0;
+            @include susy-breakpoint($bp-medium, $columns-medium) {
+                @include type-scale(small);
+            }
+            @include susy-breakpoint($bp-large, $columns-large) {
+                @include type-scale(base);
+            }
+            &-bold {
+                @include type-weight(bold);
+            }
+        }
+        &-link {
+            @include span(10 of 12 no-gutters);
+            margin: rhythm(1, 15px) span(1 of 12) 0;
+            text-align: center;
+            text-decoration: none;
+            padding: rhythm(.5, 16px) 0;
+            border: .1em solid $text-base;
+            border-radius: .35em;
+            @include background-image(linear-gradient(lighten-new($green-base-light, 20%), lighten-new($green-base-dark, 20%)));
+            @include box-shadow(rgba($background, .3) 1px 1px 0 0 inset);
+            color: $background;
+            @include susy-breakpoint($bp-medium, $columns-medium) {
+                @include span(4 of 6);
+                margin: rhythm(1, 15px) span(1 of 6) 0;
+            }
+            @include susy-breakpoint($bp-large, $columns-large) {
+                @include span(6 of 8);
+                margin: rhythm(1, 15px) span(1 of 8) 0;
+                &:hover {
+                    @include background-image(linear-gradient(lighten-new($green-base-light, 5%), lighten-new($green-base-dark, 5%)));
+                }
+            }
+        }
+        &-treelink {
+            color: $green-base-dark;
+        }
+    }
+}

@@ -1,14 +1,20 @@
 .hero {
     @extend %responsive-trigger;
-    @extend %hero-image;
+    @extend %hero;
     &.-phone {
-        background: url(/images/hero-index-phone.jpg) no-repeat;
+        background: url(/images/heros/hero-index-phone.jpg) no-repeat;
+        background-size: cover;
+        height: 139px;
     }
     &.-tablet {
-        background: url(/images/hero-index-tablet.jpg) no-repeat;
+        background: url(/images/heros/hero-index-tablet.jpg) no-repeat;
+        background-size: cover;
+        height: 400px;
     }
     &.-computer {
-        background: url(/images/hero-index-computer.jpg) no-repeat;
+        background: url(/images/heros/hero-index-computer.jpg) no-repeat;
+        background-size: cover;
+        height: 600px;
     }
 }
 
@@ -69,19 +75,19 @@ $pageHeroMap: (
 @each $page, $pageProps in $pageHeroMap {
     .hero {
         &.#{$page}-#{map-get($pageProps, small)} {
-            background: url(/images/hero-#{$page}-#{map-get($pageProps, small)}.jpg ) no-repeat;
+            background: url(/images/heros/hero-#{$page}-#{map-get($pageProps, small)}.jpg ) no-repeat;
             background-size: cover;
             height: 139px;
         }
         &.#{$page}-#{map-get($pageProps, medium)} {
-            background: url(/images/hero-#{$page}-#{map-get($pageProps, medium)}.jpg ) no-repeat;
+            background: url(/images/heros/hero-#{$page}-#{map-get($pageProps, medium)}.jpg ) no-repeat;
             background-size: cover;
-            height: 308px;
+            height: 400px;
         }
         &.#{$page}-#{map-get($pageProps, large)} {
-            background: url(/images/hero-#{$page}-#{map-get($pageProps, large)}.jpg ) no-repeat;
+            background: url(/images/heros/hero-#{$page}-#{map-get($pageProps, large)}.jpg ) no-repeat;
             background-size: cover;
-            height: 492px;
+            height: 600px;
         }
     }
 }

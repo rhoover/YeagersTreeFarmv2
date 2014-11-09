@@ -1,0 +1,12 @@
+.main {
+    @include lob-owl();
+    @include span(12 of 12 no-gutters);
+    min-height: 100vh;
+    @include susy-breakpoint($bp-medium, $columns-medium) {
+        @include span(12 of 18 no-gutters);
+        @include suffix(1);
+    }
+    @include susy-breakpoint($bp-large, $columns-large) {
+        @include span(16 of 24 no-gutters);
+    }
+}

@@ -1,0 +1,16 @@
+.content {
+    margin-top: rhythm(1, 16px);
+    @include span(12 of 12 no-gutters);
+    @include pad(1 of 12 no-gutters);
+    min-height: 100vh;
+    font-family: 'Sans', sans-serif;
+    color: $text-base;
+    @include susy-breakpoint($bp-medium, $columns-medium) {
+        @include span(18 of 18 no-gutters);
+        @include pad(1 of 18 no-gutters);
+    }
+    @include susy-breakpoint($bp-large, $columns-large) {
+        @include span(24 of 24 no-gutters);
+        @include pad(3 of 24 no-gutters);
+    }
+}

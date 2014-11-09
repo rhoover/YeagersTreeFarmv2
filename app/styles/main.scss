@@ -11,9 +11,13 @@
 
 @import "helpers/mixins";
 @import "helpers/placeholders";
+@import "helpers/sprites";
 
 @import "animations/mobile-menu";
 @import "components/body";
 @import "components/buttons";
 @import "components/header";
 @import "components/hero";
+@import "components/content";
+@import "components/content-sidebar";
+@import "components/content-main";
