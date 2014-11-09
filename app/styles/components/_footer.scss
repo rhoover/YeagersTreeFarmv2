@@ -1,0 +1,26 @@
+.footer {
+    margin-top: rhythm(1, 16px);
+    @include span(12 of 12 no-gutters);
+    @include pad(1 of 12 no-gutters);
+    padding-bottom: rhythm(1, 16px);
+    font-family: 'Sans', sans-serif;
+    background-color: $green-base-light;
+    border-top: .1em solid $green-base-dark;
+    color: $background;
+    @include type-scale(small);
+    @include susy-breakpoint($bp-medium, $columns-medium) {
+        @include span(18 of 18 no-gutters);
+        @include pad(1 of 18 no-gutters);
+        @include type-scale(base);
+    }
+    @include susy-breakpoint($bp-large, $columns-large) {
+        @include span(24 of 24 no-gutters);
+        @include pad(2 of 24 no-gutters);
+    }
+    &-text {
+        margin-bottom: 0;
+        &-link {
+            color: $background;
+        }
+    }
+}

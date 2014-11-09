@@ -1,8 +1,10 @@
 .main {
+    display: none;
     @include lob-owl();
     @include span(12 of 12 no-gutters);
     min-height: 100vh;
     @include susy-breakpoint($bp-medium, $columns-medium) {
+        display: inline-block;
         @include span(12 of 18 no-gutters);
         @include suffix(1);
     }

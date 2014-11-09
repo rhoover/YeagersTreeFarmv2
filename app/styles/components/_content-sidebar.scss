@@ -3,13 +3,14 @@
     @include span(12 of 12 no-gutters);
     min-height: 100vh;
     @include susy-breakpoint($bp-medium, $columns-medium) {
-        @include span(last 6 of 18);
+        @include span(last 6 of 18 no-gutters);
     }
     @include susy-breakpoint($bp-large, $columns-large) {
-        @include span(last 8 of 24);
+        @include span(last 8 of 24 no-gutters);
     }
     &-item {
         float: left;
+        width: 100%;
         &-image {
             display: inline-block;
             width: 48px;
