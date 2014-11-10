@@ -2,7 +2,6 @@
     display: none;
     @include lob-owl();
     @include span(12 of 12 no-gutters);
-    min-height: 100vh;
     @include susy-breakpoint($bp-medium, $columns-medium) {
         display: inline-block;
         position: relative;
@@ -14,34 +13,93 @@
     }
 }
 
-.home {
-    &-one {
-        @extend %responsive-trigger;
-        &.large {
-            position: relative;
-            background: url(/images/home1.png) no-repeat;
-            height: 622px;
-            z-index: 10;
-        }
-    }
-    &-two {
-        @extend %responsive-trigger;
-        &.large {
-            position: relative;
-            margin: -15em 0 0 span(9 of 24);
-            background: url(/images/home2.png) no-repeat;
-            height: 622px;
-            z-index: 5;
-        }
-    }
-    &-three {
-        @extend %responsive-trigger;
-        &.large {
-            position: relative;
-            margin: -5em 0 0 0;
-            background: url(/images/home3.png) no-repeat;
-            height: 622px;
-            z-index: 7;
+// .home {
+//     &-one {
+//         @extend %responsive-trigger;
+//         &.large {
+//             position: relative;
+//             background: url(/images/home1.png) no-repeat;
+//             height: 622px;
+//             z-index: 10;
+//         }
+//     }
+//     &-two {
+//         @extend %responsive-trigger;
+//         &.large {
+//             position: relative;
+//             margin: -15em 0 0 span(9 of 24);
+//             background: url(/images/home2.png) no-repeat;
+//             height: 622px;
+//             z-index: 5;
+//         }
+//     }
+//     &-three {
+//         @extend %responsive-trigger;
+//         &.large {
+//             position: relative;
+//             margin: -5em 0 0 0;
+//             background: url(/images/home3.png) no-repeat;
+//             height: 622px;
+//             z-index: 7;
+//         }
+//     }
+// }
+
+$happiness: (
+    one: (
+        tablet: medium,
+        computer: large
+    ),
+    two: (
+        tablet: medium,
+        computer: large
+    ),
+    three: (
+        tablet: medium,
+        computer: large
+    )
+);
+
+@each $smile, $innerSmile in $happiness {
+    .home {
+        &-#{$smile} {
+            @extend %responsive-trigger;
+            &.#{map-get($innerSmile, computer)} {
+                position: relative;
+                height: 622px;
+                @if $smile == one {
+                    background: url(/images/home1.png) no-repeat;
+                    z-index: 10;
+                }
+                @else if $smile == two {
+                    margin: -15em 0 0 span(6 of 16);
+                    background: url(/images/home2.png) no-repeat;
+                    z-index: 5;
+                }
+                @else if $smile == three {
+                    margin: -5em 0 0 0;
+                    background: url(/images/home3.png) no-repeat;
+                    z-index: 7;
+                }
+            }
+            &.#{map-get($innerSmile, tablet)} {
+                position: relative;
+                height: 500px;
+                @if $smile == one {
+                    background: url(/images/home1-#{map-get($innerSmile, tablet)}.png) no-repeat;
+                    z-index: 10;
+                }
+                @else if $smile == two {
+                    margin: -10em 0 0 span(3 of 12);
+                    background: url(/images/home2-#{map-get($innerSmile, tablet)}.png) no-repeat;
+                    z-index: 5;
+                }
+                @else if $smile == three {
+                    margin: -5em 0 0 0;
+                    background: url(/images/home3-#{map-get($innerSmile, tablet)}.png) no-repeat;
+                    z-index: 7;
+                }
+            }
         }
     }
 }

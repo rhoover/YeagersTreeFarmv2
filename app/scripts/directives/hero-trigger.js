@@ -9,7 +9,6 @@ angular
             link: function (scope, element) {
 
                 scope = {};
-                var pages = [' ', 'about', 'contact-form-thank-you', 'contact', 'locate', 'services', 'tall-trees', 'traditions', 'treecare', 'trees'];
                 var url = $window.location.pathname;
                 var file = url.substring(url.lastIndexOf('/')+1);
                 var name = file.split('.');

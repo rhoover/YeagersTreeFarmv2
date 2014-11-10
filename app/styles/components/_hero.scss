@@ -1,6 +1,7 @@
 .hero {
     @extend %responsive-trigger;
     @extend %hero;
+    //because initial load does not include /index.html, at least locally
     &.-phone {
         background: url(/images/heros/hero-index-phone.jpg) no-repeat;
         background-size: cover;
