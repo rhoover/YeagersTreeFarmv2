@@ -101,6 +101,14 @@
 
     <div class="content">
 
+        <div class="main">
+
+            <div class="home-one" res-trigger></div>
+            <div class="home-two" res-trigger></div>
+            <div class="home-three" res-trigger></div>
+
+        </div> <!-- end .main -->
+
         <div class="sidebar">
 
             <div class="sidebar-item">
@@ -162,21 +170,13 @@
 
         </div><!-- end .sidebar -->
 
-        <div class="main">
-
-            <div class="home-one" res-trigger></div>
-            <div class="home-two" res-trigger></div>
-            <div class="home-three" res-trigger></div>
-
-        </div> <!-- end .main -->
-
     </div> <!-- end .content -->
 
     <footer class="footer">
         <p class="footer-text">&copy; Yeager's Tree Farm</p>
         <p class="footer-text">Proud Members of the <a class="footer-text-link" href="http://www.christmastrees.org/" target="_blank">PA Christmas Tree Growers Association</a></p>
         <p class="footer-text">AgMap: <a class="footer-text-link" href="http://agmap.psu.edu/" target="_blank">Promoting Agriculture Businesses</a></p>
-    </footer>
+    </footer><!-- end .footer -->
 
 
 
@@ -199,8 +199,12 @@
         <!-- build:js({app,.tmp}) scripts/yeagers.min.js -->
         <script src="scripts/yeagers.js"></script>
         <script src="scripts/controllers/header.js"></script>
+        <script src="scripts/services/google-map-load-api.js"></script>
+        <script src="scripts/services/google-map-stuff.js"></script>
         <script src="scripts/directives/responsive-trigger.js"></script>
         <script src="scripts/directives/hero-trigger.js"></script>
+        <script src="scripts/directives/main-div-trigger.js"></script>
+        <script src="scripts/directives/google-map.js"></script>
         <!-- endbuild -->
-</body>
+</body><!-- end body -->
 </html>

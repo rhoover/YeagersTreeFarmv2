@@ -101,6 +101,10 @@
 
     <div class="content">
 
+        <div class="main" main-div-trigger>
+            <div id="treelocation" class="googlemap" google-map lat=40.11545 lon=-75.57973></div> <!-- end .googlemap -->
+        </div>
+
         <div class="sidebar">
 
             <div class="sidebar-item">
@@ -162,10 +166,6 @@
 
         </div><!-- end .sidebar -->
 
-        <div class="main">
-
-        </div> <!-- end .main -->
-
     </div> <!-- end .content -->
 
     <footer class="footer">
@@ -195,8 +195,12 @@
         <!-- build:js({app,.tmp}) scripts/yeagers.min.js -->
         <script src="scripts/yeagers.js"></script>
         <script src="scripts/controllers/header.js"></script>
+        <script src="scripts/services/google-map-load-api.js"></script>
+        <script src="scripts/services/google-map-stuff.js"></script>
         <script src="scripts/directives/responsive-trigger.js"></script>
         <script src="scripts/directives/hero-trigger.js"></script>
+        <script src="scripts/directives/main-div-trigger.js"></script>
+        <script src="scripts/directives/google-map.js"></script>
         <!-- endbuild -->
 </body>
 </html>

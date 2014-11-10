@@ -1,0 +1,13 @@
+.main.locate {
+    display: block;
+}
+
+.googlemap {
+    height: rhythm(10, 16px);
+    @include susy-breakpoint($bp-medium, $columns-medium) {
+        height: rhythm(20, 16px);
+    }
+    @include susy-breakpoint($bp-large, $columns-large) {
+        height: rhythm(20, 16px);
+    }
+}

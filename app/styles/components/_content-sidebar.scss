@@ -2,8 +2,10 @@
     @include lob-owl();
     @include span(12 of 12 no-gutters);
     min-height: 100vh;
+    margin-top: rhythm(1, 16px);
     @include susy-breakpoint($bp-medium, $columns-medium) {
         @include span(last 6 of 18 no-gutters);
+        margin-top: 0;
     }
     @include susy-breakpoint($bp-large, $columns-large) {
         @include span(last 8 of 24 no-gutters);
