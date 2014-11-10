@@ -27,12 +27,6 @@
         }
         &-text {
             margin: rhythm(1, 15px) 0 0;
-            @include susy-breakpoint($bp-medium, $columns-medium) {
-                @include type-scale(small);
-            }
-            @include susy-breakpoint($bp-large, $columns-large) {
-                @include type-scale(base);
-            }
             &-bold {
                 @include type-weight(bold);
             }

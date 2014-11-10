@@ -72,7 +72,7 @@ $happiness: (
                     z-index: 10;
                 }
                 @else if $smile == two {
-                    margin: -15em 0 0 span(6 of 16);
+                    margin: -15em 0 0 span(5 of 16);
                     background: url(/images/home2.png) no-repeat;
                     z-index: 5;
                 }
