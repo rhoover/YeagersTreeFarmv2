@@ -75,9 +75,6 @@
         <script src="bower_components/modernizr/modernizr.js"></script>
         <!-- endbuild -->
 
-        <link href='http://fonts.googleapis.com/css?family=Julius+Sans+One' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,700' rel='stylesheet' type='text/css'>
-
     </head>
   <body>
     <!--[if lt IE 10]>
@@ -175,7 +172,7 @@
 
     </div> <!-- end .content -->
 
-    <footer class="footer">
+    <footer class="footer" font-load>
         <p class="footer-text">&copy; Yeager's Tree Farm</p>
         <p class="footer-text">Proud Members of the <a class="footer-text-link" href="http://www.christmastrees.org/" target="_blank">PA Christmas Tree Growers Association</a></p>
         <p class="footer-text">AgMap: <a class="footer-text-link" href="http://agmap.psu.edu/" target="_blank">Promoting Agriculture Businesses</a></p>
@@ -202,12 +199,14 @@
         <!-- build:js({app,.tmp}) scripts/yeagers.min.js -->
         <script src="scripts/yeagers.js"></script>
         <script src="scripts/controllers/header.js"></script>
+        <script src="scripts/services/google-font-load-api.js"></script>
         <script src="scripts/services/google-map-load-api.js"></script>
         <script src="scripts/services/google-map-stuff.js"></script>
         <script src="scripts/directives/responsive-trigger.js"></script>
         <script src="scripts/directives/hero-trigger.js"></script>
         <script src="scripts/directives/main-div-trigger.js"></script>
         <script src="scripts/directives/google-map.js"></script>
+        <script src="scripts/directives/font-load.js"></script>
         <!-- endbuild -->
 </body>
 </html>
