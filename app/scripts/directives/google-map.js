@@ -7,10 +7,8 @@ angular
         return {
             restrict: 'A',
             scope: {
-
                 lat: '@lat',
                 lon: '@lon'
-
             },
             link: function (scope, element, attrs) {
 
