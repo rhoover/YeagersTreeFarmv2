@@ -66,6 +66,9 @@
             &:hover {
                 text-decoration: underline;
             }
+            &:last-of-type {
+                border-right: none;
+            }
     }
 }
 

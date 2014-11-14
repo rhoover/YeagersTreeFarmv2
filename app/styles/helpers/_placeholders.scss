@@ -44,3 +44,16 @@
         margin-top: rhythm(1, 16px);
     }
 }
+
+%buttons {
+    @include span(10 of 12 no-gutters);
+    margin: rhythm(1, 15px) span(1 of 12) 0;
+    text-align: center;
+    text-decoration: none;
+    padding: rhythm(.5, 16px) 0;
+    border: .1em solid $text-base;
+    border-radius: .35em;
+    @include background-image(linear-gradient(lighten-new($green-base-light, 20%), lighten-new($green-base-dark, 20%)));
+    @include box-shadow(rgba($background, .3) 1px 1px 0 0 inset);
+    color: $background;
+}

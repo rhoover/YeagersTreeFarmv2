@@ -2,6 +2,7 @@
     display: none;
     @include lob-owl();
     @include span(12 of 12 no-gutters);
+    overflow: hidden;
     @include susy-breakpoint($bp-medium, $columns-medium) {
         display: inline-block;
         position: relative;

@@ -1,7 +1,3 @@
-.main.locate {
-    display: block;
-}
-
 .googlemap {
     height: rhythm(10, 16px);
     @include susy-breakpoint($bp-medium, $columns-medium) {

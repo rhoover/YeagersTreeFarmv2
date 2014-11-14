@@ -1,0 +1,12 @@
+.talltree {
+    &-images {
+        max-width: 250px;
+        max-height: auto;
+        @include susy-breakpoint($bp-medium, $columns-medium) {
+            max-width: 480px;
+        }
+        @include susy-breakpoint($bp-large, $columns-large) {
+            max-width: 640px;
+        }
+    }
+}

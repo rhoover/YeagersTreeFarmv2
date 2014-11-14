@@ -14,3 +14,10 @@
         @include pad(3 of 24 no-gutters);
     }
 }
+
+$pageDesc: (about, contact-form-thank-you, contact, locate, services, tall-trees, traditions, treecare, trees);
+@each $page in $pageDesc {
+    .main.#{$page} {
+        display: block;
+    }
+}
