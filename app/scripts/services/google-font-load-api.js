@@ -6,6 +6,7 @@ angular
 
         var deferred = $q.defer();
 
+        //Lazy Load Google fonts. The FOUC is worth the performance benefits IMHO.
         function loadScript() {
             var fontLinks = ['http://fonts.googleapis.com/css?family=Julius+Sans+One', 'http://fonts.googleapis.com/css?family=Open+Sans:300,700'];
             for (var i = 0; i < fontLinks.length; i++) {

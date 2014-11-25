@@ -366,15 +366,19 @@ module.exports = function (grunt) {
           dest: '<%= config.dist %>',
           src: [
             '*.{ico,png,txt}',
-            'images/{,*/}*.webp',
+            // 'images/{,*/}*.webp',
+            'images/{,*/}*.*',
             '{,*/}*.html',
             'styles/fonts/{,*/}*.*',
-            'images/heros/{,*/*}*.*'
+            'images/heros/{,*/*}*.*',
+            'images/icons-devices/{,*/*}*.*'
           ]
-        }, {
-          src: 'node_modules/apache-server-configs/dist/.htaccess',
-          dest: '<%= config.dist %>/.htaccess'
-        }]
+        }
+        // {
+        //   src: 'node_modules/apache-server-configs/dist/.htaccess',
+        //   dest: '<%= config.dist %>/.htaccess'
+        // }
+        ]
       },
       styles: {
         expand: true,
